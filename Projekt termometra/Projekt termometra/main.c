@@ -376,7 +376,7 @@ int main(void)
 	wyborDDR=0xff; // inicjacja wyboru + portow dla diod trybu
 	
 	przyciskiDDR &= ~((1<<SKALA)|(1<<MIN)|(1<<MAX)|(1<<RESET)); // init przyciskow
-	przyciski |= ((1<<SKALA)|(1<<MIN)|(1<<MAX)|(1<<RESET));
+	przyciski |= ((1<<SKALA)|(1<<MIN)|(1<<MAX)|(1<<RESET)); // pull up
 	
 	diodyRodzajTemperaturyDDR |= ustawPorty; // wy maskowanie portow dla diod
 	wygasWszystkieDiody();
